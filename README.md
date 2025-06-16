@@ -6,7 +6,7 @@ This repository is the official implementation of the paper **FlashVTG: Feature 
 >
 > The University of Queensland, Australia
 
-[**Preparation**](#-Preparation) | [**Training**](#-training) | [**Inference and Evaluation**](#-Inference-and-Evaluation) | [**Model Zoo**](#-model-zoo)
+[**Preparation**](#-Preparation) | [**Training**](#-training) | [**Inference and Evaluation**](#-Inference-and-Evaluation) 
 
 <p align="center"><img width="850" src="figure/model.png"></p>
 
@@ -26,7 +26,15 @@ This repository is the official implementation of the paper **FlashVTG: Feature 
 
 2. Download datasets.
 
-   For path and feature extracted by InternVideo2, you can download from [Google Drive](https://drive.google.com/drive/folders/1o806-jIqrAPwiUvNpnVQdlrSLRjIlMpE?usp=drive_link).
+    For path and feature extracted by InternVideo2, you can download from [Google Drive](https://drive.google.com/drive/folders/1ENhgqwiSmCHxNsADIUdMBpF3lUww4ULG?usp=sharing).
+
+<br>
+Note:
+
+- Since this repository serves as the baseline for the ICCV 2025 Workshop, the original test set will not be provided. If you need to test, please split the training set. Create the required files in the format of `highlight_train_release_IV2.jsonl` and `highlight_val_release.jsonl`.
+
+
+
 
 ## 🏋️ Training
 
@@ -63,17 +71,6 @@ bash FlashVTG/scripts/inference.sh data/MR.py results/QVHihlights_IV2/model_best
 ```
 
 For QVHighlights test set, you could do the evaluation on [codalab](https://codalab.lisn.upsaclay.fr/competitions/6937). For more details, check [standalone_eval/README.md](standalone_eval/README.md).
-
-## 📦 Model Zoo
-
-We provide multiple checkpoints and training logs here. Configuration can be find in each ``opt.json`` file.
-
-| Dataset              | Model file                                                                                                             |
-|:---------------------|------------------------------------------------------------------------------------------------------------------------|
-| OVIS (InternVideo2)  | [checkpoint and training log](https://drive.google.com/drive/folders/1pyLZc5-hWIBoslkphFbRRqogTQwz4VQd?usp=drive_link) |
-| MOT17 (InternVideo2) | [checkpoint and training log](https://drive.google.com/drive/folders/1a96hLu_uf1WE1YLBVUtbimTzEnZLS87O?usp=drive_link)  |
-| MOT20 (InternVideo2) | [checkpoint and training log](https://drive.google.com/drive/folders/16CEr5TRBs2g432L8h8vNV1k5c8kZYehl?usp=drive_link)  |
-
 
 # Acknowledgements
 
